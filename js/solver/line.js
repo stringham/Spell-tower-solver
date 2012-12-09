@@ -1,4 +1,10 @@
-Line = function(path){
+/**
+ * Spell Tower Solver
+ * 2012
+ * https://github.com/stringham/Spell-tower-solver
+ * Copyright Ryan Stringham
+ */
+ Line = function(path){
 	var board = $('.board');
 	this.segments = [];
 	for(var i=0; i<path.length-1; i++){

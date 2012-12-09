@@ -1,4 +1,10 @@
-var cellSize = 40,
+/**
+ * Spell Tower Solver
+ * 2012
+ * https://github.com/stringham/Spell-tower-solver
+ * Copyright Ryan Stringham
+ */
+ var cellSize = 40,
 dictionaryLength,
 board,
 count;

@@ -1,4 +1,10 @@
-Solution = function(word, path) {
+/**
+ * Spell Tower Solver
+ * 2012
+ * https://github.com/stringham/Spell-tower-solver
+ * Copyright Ryan Stringham
+ */
+ Solution = function(word, path) {
 	this.word = word;
 	this.path = path;
 	this.score = '';// score(path);

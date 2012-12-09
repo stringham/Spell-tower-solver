@@ -1,4 +1,10 @@
-Column = function(size, column, board){
+/**
+ * Spell Tower Solver
+ * 2012
+ * https://github.com/stringham/Spell-tower-solver
+ * Copyright Ryan Stringham
+ */
+ Column = function(size, column, board){
 	this.x = column;
 	this.cells = [];
 	this.board = board;
