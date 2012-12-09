@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Spell Tower Solver</title>
+		<meta name="description" content="Spelltower and Boggle solver" />
+		<meta name="keywords" content="Solver, Spelltower, boggle, word game, word solver" />
+		<meta name="author" content="Ryan Stringham" />
+		<script src = "js/lib/jquery-1.7.2.min.js"></script>
+		<script src = 'js/lib/jquery-ui-1.8.21.custom.min.js'></script>
+		<script src = "js/lib/jquery.qtip.js"></script>
+		<script type='text/javascript' src='js/solver/dict.js'> </script>
+		<script type='text/javascript' src='js/solver/main.js'> </script>
+		<script type='text/javascript' src='js/solver/board.js'> </script>
+		<script type='text/javascript' src='js/solver/column.js'> </script>
+		<script type='text/javascript' src='js/solver/cell.js'> </script>
+		<script type='text/javascript' src='js/solver/solution.js'> </script>
+		<script type='text/javascript' src='js/solver/line.js'> </script>
+		<script type='text/javascript' src='js/lib/BJSpell.js'> </script>
+		<script type='text/javascript' src='js/lib/en_US.js'> </script>
+		<link href='css/jquery.qtip.css' rel='stylesheet'>
+		<link href='css/style.css' rel='stylesheet'>
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-33833540-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+	</head>
+
+	<body bgcolor='#CDD2D8'>
+		<div class='solutions'></div>
+		<div class='boardandoptions'>
+			<div class='options'>
+				<div class='buttons'>
+					<button onclick='solve()'>Solve!</button>
+					<button onclick='clearBoard()'>Clear</button>
+					<div class='shift'>
+						<button onclick='shiftUp()' style="background-image: url('images/up.png');"></button>
+						<button onclick='shiftDown()' style="background-image: url('images/down.png');"></button>
+					</div>
+					<button onclick='useWord()'>Use</button>
+					<button onclick='addRow()'>Random</button>
+					<button class = 'resize'>Resize</button>
+				</div>
+				<div class='filter'>
+					<input type='checkbox' id='filter' name='filter' value='filter' checked />
+					<label for='filter'>Filter</label>
+				</div>
+				<fieldset class = 'fill-option'>
+					<legend>Auto Fill By: </legend>
+					<input id='fill-row' type='checkbox' name='fill-option' value='row' checked>
+					<label for='fill-row'>Row</label>
+					<input id='fill-col' type='checkbox' name='fill-option' value='column' >
+					<label for='fill-col'>Column</label>
+				</fieldset> 
+			</div>
+		</div>
+	</body>
+</html>
