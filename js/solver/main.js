@@ -212,6 +212,23 @@ $('document').ready(function(){
 
 		});
 	});
+
+	var saved = window.location.hash;
+	if(saved.length > 1){
+		saved = saved.substr(1);
+		try{
+			var decoded = JSON.parse(decodeURIComponent(saved));
+			if(decoded['w'] && decoded['h'] && decoded['t']){
+				board.destroy();
+				board = new Board(decoded['w'], decoded['h']);
+				cells = board.getCells();
+				$('.boardandoptions').prepend(board.dom);
+				setSize();
+				board.fillBoard(0,0,decoded['t']);
+				setTimeout(function() {board.solve();}, 1500);
+			}
+		} catch(e){}
+	}
 	
 });
 
@@ -268,6 +285,8 @@ var clearBoard = function(){
 
 var solve = function(){
 	board.solve();
+	var serialized = {w:board.width, h:board.height, t:board.getText()};
+	window.location.hash = encodeURIComponent(JSON.stringify(serialized));
 }
 
 

@@ -361,9 +361,25 @@ Board.prototype.fillPrompt = function(x,y){
 	fillPrompt('Enter the characters you would<br>like to fill from this point:', function(value){
 		if(!value || value.length == 0)
 			return;
-		var remainder = me.fillRow(y,Array(x+1).join(' ') + value);
-		y++;
-		while(remainder.length>0 && y < me.height)
-			remainder = me.fillRow(y++, remainder);
+		me.fillBoard(x,y,value);
 	});
+}
+
+Board.prototype.fillBoard = function(x,y,text){
+	if(!text || text.length == 0)
+		return;
+	var remainder = this.fillRow(y, Array(x+1).join(' ') + text);
+	y++;
+	while(remainder.length > 0 && y < this.height)
+		remainder = this.fillRow(y++, remainder);
+}
+
+Board.prototype.getText = function(){
+	var text = '';
+	for(var i=0; i<this.width; i++){
+		for(var j=0; j<this.height; j++){
+			text += this.letters[i][j] ? this.letters[i][j] : ' ';
+		}
+	}
+	return text;
 }
