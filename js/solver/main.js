@@ -262,7 +262,7 @@ var setSize = function(){
 	var wheight = window.innerHeight;
 	var wwidth = window.innerWidth;
 	var boardHeight = wheight - $('.options').height()-5;
-	var boardWidth = $('.options').width()+15;
+	var boardWidth = $('.options').width()+16;
 	cellSize = Math.max(Math.min(boardHeight/board.height,boardWidth/board.width)-3,25);
 
 	$('.solutions').css({'left':(board.width*(cellSize+2) + 15) + 'px', 'height':(board.height*(cellSize+2))}).click(function(){board.unHighlightAll(true)});
