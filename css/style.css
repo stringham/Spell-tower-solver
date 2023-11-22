@@ -44,7 +44,7 @@
 }
 
 .options {
-	width: 330px;
+	width: 360px;
 }
 
 .buttons {
@@ -131,14 +131,6 @@
 	/*border:1px black solid;*/
 	/*display: inline-block;*/
 	display: none;
-}
-
-.filter label{
-	/*position: relative;
-	border: 1px black solid;
-	right:5px;
-	bottom:3px;
-	margin:0;*/
 }
 
 .fill-option {

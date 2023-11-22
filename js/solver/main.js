@@ -4,10 +4,10 @@
  * https://github.com/stringham/Spell-tower-solver
  * Copyright Ryan Stringham
  */
- var cellSize = 40,
-dictionaryLength,
-board,
-count;
+var cellSize = 40,
+	dictionaryLength,
+	board,
+	count;
 
 var iOS = ( navigator.userAgent.match(/(iPad|iPhone|iPod)/i) ? true : false );
 
@@ -175,7 +175,8 @@ function fillPrompt(question, callback)
 }
 
 $('document').ready(function(){
-	board = new Board(8,16);
+	// board = new Board(8,16);
+	board = new Board(9,13);
 	cells = board.getCells();
 	$('.boardandoptions').prepend(board.dom);
 	init();
